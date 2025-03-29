@@ -1,14 +1,12 @@
-// Footer.tsx
-import React from "react";
 
-const Footer: React.FC = () => {
+export default function Footer() {
   return (
     <footer className="bg-gray-100 text-gray-800 pt-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           {/* Logo y dirección */}
           <div className="w-full md:w-1/3 text-center md:text-left mb-6">
-            <img src="/img/Logo_V6_LRWH.png" alt="Chibiquiles" className="mx-auto md:mx-0 w-36 mb-3" />
+            <img src="/Logo_V6_LRWH.png" alt="Chibiquiles" className="mx-auto md:mx-0 w-36 mb-3" />
             <ul className="text-sm space-y-1">
               <li>
                 <strong>Dirección:</strong> Cancún, Quintana Roo
@@ -57,12 +55,10 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-200 mt-8 pt-4 text-center">
           <p className="text-sm">© 2025 Chibiquiles. Todos los derechos reservados.</p>
           <div className="mt-2">
-            <img src="/img/payment-item.png" alt="Métodos de pago" className="mx-auto h-6" />
+            <img src="/payment-item.png" alt="Métodos de pago" className="mx-auto h-6" />
           </div>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

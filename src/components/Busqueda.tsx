@@ -19,7 +19,7 @@ export default function Busqueda() {
                         {/* Botón */}
                         <button
                             type="submit"
-                            className="w-full md:w-1/4 bg-orange-500 text-white font-bold rounded-md h-[50px] hover:bg-orange-600 transition"
+                            className="w-full md:w-1/4 bg-orange-400 text-white font-bold rounded-md h-[50px] hover:bg-orange-600 transition"
                         >
                             BUSCAR
                         </button>

@@ -35,7 +35,7 @@ export default function FeaturedProducts() {
         <div className="flex justify-center mb-6">
           <ul className="flex flex-wrap gap-4 justify-center text-gray-700 font-medium">
             {categories.map((cat) => (
-              <li key={cat.value} className="cursor-pointer hover:text-orange-500 transition">
+              <li key={cat.value} className="cursor-pointer hover:text-orange-400 transition">
                 {cat.label}
               </li>
             ))}
@@ -72,7 +72,7 @@ export default function FeaturedProducts() {
                 <h6 className="text-md font-semibold text-gray-800">
                   <a href="#">{product.name}</a>
                 </h6>
-                <h5 className="text-orange-500 font-bold text-lg">${product.price.toFixed(2)}</h5>
+                <h5 className="text-orange-400 font-bold text-lg">${product.price.toFixed(2)}</h5>
               </div>
             </div>
           ))}
