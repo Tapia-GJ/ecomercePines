@@ -49,10 +49,38 @@ export default function Header() {
                         </div>
 
                         {/* <!-- Menu --> */}
-                        <nav className="flex gap-9 font-medium text-black">
+                        {/* <nav className="flex gap-9 font-medium text-black">
                             <Link to="/" className={isActive("/")}>HOME</Link>
                             <Link to="/Top" className={isActive("/Top")}>TOP</Link>
                             <Link to="/Categorias" className={isActive("/Categorias")}>CATEGORÍAS</Link>
+                            <Link to="/Blog" className={isActive("/Blog")}>BLOG</Link>
+                        </nav> */}
+
+                        <nav className="flex gap-9 font-medium text-black relative">
+                            <Link to="/" className={isActive("/")}>HOME</Link>
+                            <Link to="/Top" className={isActive("/Top")}>TOP</Link>
+
+                            {/* Categorías desplegable */}
+                            <div className="relative group">
+                                <button className={`cursor-pointer ${path.includes("/Pines") || path.includes("/Llaveros") ? 'text-orange-400' : 'hover:text-orange-400'}`}>
+                                    CATEGORÍAS
+                                </button>
+                                <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded z-10 w-full">
+                                    <Link
+                                        to="/Pines"
+                                        className="block px-4 py-2 text-sm text-black hover:text-orange-400 hover:bg-gray-100"
+                                    >
+                                        Pines
+                                    </Link>
+                                    <Link
+                                        to="/Llaveros"
+                                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100 hover:text-orange-400"
+                                    >
+                                        Llaveros
+                                    </Link>
+                                </div>
+                            </div>
+
                             <Link to="/Blog" className={isActive("/Blog")}>BLOG</Link>
                         </nav>
 
