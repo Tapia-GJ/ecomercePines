@@ -1,4 +1,4 @@
-import {Link, NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export default function Header() {
     return (
@@ -46,7 +46,7 @@ export default function Header() {
                         {/* <!-- Menu --> */}
                         <nav className="flex gap-9 font-medium text-black">
                             <Link to="/" className="text-orange-500">HOME</Link>
-                            <Link to="#" className="hover:text-orange-500">TOP</Link>
+                            <Link to="/Top" className="hover:text-orange-500">TOP</Link>
                             <Link to="#" className="hover:text-orange-500">CATEGORÍAS</Link>
                             <Link to="#" className="hover:text-orange-500">BLOG</Link>
                         </nav>

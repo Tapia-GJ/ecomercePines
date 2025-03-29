@@ -7,7 +7,7 @@ const blogs = [
     title: "Cuidados básicos para que tus pines duren más",
     date: "Marzo 4, 2025",
     comments: 5,
-    image: "/img/blog/limpiar.jpg",
+    image: "/blog/limpiar.jpg",
     excerpt:
       "Unos simples trucos (como dónde colocarlos y cómo limpiarlos) pueden alargar la vida de tus pines favoritos 🧽🧼",
     link: "/blog#cuidados",
@@ -17,7 +17,7 @@ const blogs = [
     title: "Formas creativas de usar llaveros (que no sabías)",
     date: "Marzo 16, 2025",
     comments: 5,
-    image: "/img/blog/creativo.jpg",
+    image: "/blog/creativo.jpg",
     excerpt:
       "No solo son para tus llaves. Decora mochilas, estuches o incluso conviértelos en colgantes únicos 🧷💡",
     link: "/blog#formas",
@@ -27,7 +27,7 @@ const blogs = [
     title: "Cómo elegir el pin perfecto para tu mochila",
     date: "Marzo 27, 2025",
     comments: 5,
-    image: "/img/blog/escoger.jpg",
+    image: "/blog/escoger.jpg",
     excerpt:
       "¿Eres más de colores vibrantes o diseños minimalistas? Aquí te damos ideas para encontrar el pin que hable por ti 🎒✨",
     link: "/blog#mochila",
