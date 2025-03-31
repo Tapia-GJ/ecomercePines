@@ -1,6 +1,6 @@
 import Busqueda from "../components/Busqueda";
 import CategoriesSlider from "../components/CategoriesSlider";
-import FeaturedProducts from "../components/FeaturedProducts";
+import AllProducts from "../components/AllProducts";
 import BlogPreview from "../components/BlogPreview";
 export default function IndexPage() {
   return (
@@ -25,7 +25,7 @@ export default function IndexPage() {
         </div>
       </section>
       <CategoriesSlider />
-      <FeaturedProducts />
+      <AllProducts />
       
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 px-4 py-10">
         <img src="/banner/banner-1.jpg" alt="Banner 1" className="w-full rounded" />

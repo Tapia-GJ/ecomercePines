@@ -15,10 +15,10 @@ export default function AppRouter() {
         <Route path="/Login" element={ <LoginPage />} />
         <Route path="/Registro" element={<RegistroPage />} />
         <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
-          <Route path="/" element={<IndexPage /> } index />
-          <Route path="/Top" element={<TopPage />} />
-          <Route path="/Pines" element={<PinesPage />} />
-          <Route path="/Llaveros" element={<LlaverosPage />} />
+          <Route path="/" element={<ProtectedRoute><IndexPage /></ProtectedRoute> } index />
+          <Route path="/Top" element={<ProtectedRoute><TopPage /></ProtectedRoute>} />
+          <Route path="/Pines" element={<ProtectedRoute><PinesPage /></ProtectedRoute>} />
+          <Route path="/Llaveros" element={<ProtectedRoute><LlaverosPage /></ProtectedRoute>} />
         </Route>
       </Routes>
   )

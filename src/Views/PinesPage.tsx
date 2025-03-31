@@ -1,4 +1,4 @@
-import SliderCard from "../components/SliderCardPines";
+import SliderCardPines from "../components/SliderCardPines";
 
 export default function PinesPage() {
   return (
@@ -25,7 +25,7 @@ export default function PinesPage() {
 
         {/* Slider centrado y limpio */}
         <div className="w-full">
-          <SliderCard />
+          <SliderCardPines />
         </div>
       </div>
 
