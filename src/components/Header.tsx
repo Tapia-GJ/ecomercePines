@@ -1,9 +1,10 @@
 import { Link, useLocation } from 'react-router-dom'
+import { UserAuth } from '../context/AuthContext';
 
 export default function Header() {
     const location = useLocation();
     const path = location.pathname;
-
+    const { signOut } = UserAuth();
     const isActive = (route: string) => path === route ? 'text-orange-400' : 'hover:text-orange-400';
 
     return (
@@ -32,9 +33,12 @@ export default function Header() {
                                 <i className="w-4 h-4 fab fa-twitter"></i>
                             </a>
                             <span className="text-gray-400">|</span>
-                            <a href="#" className="flex items-center gap-2 text-black hover:text-orange-400">
+                            {/* <Link to="/Login" className="flex items-center gap-2 text-black hover:text-orange-400">
                                 <i className="w-4 h-4 fas fa-user"></i> Login
-                            </a>
+                            </Link> */}
+                            <button onClick={signOut} className="flex items-center gap-2 text-black hover:text-orange-400">
+                                <i className="w-4 h-4 fas fa-user"></i> Cerrar sesión
+                            </button>
                         </div>
 
                     </div>
