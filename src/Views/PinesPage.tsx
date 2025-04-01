@@ -59,7 +59,7 @@ export default function PinesPage() {
                 <ul className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 opacity-0 group-hover:opacity-100 transition duration-300">
                   {[
                     { icon: "fa fa-heart", href: "#" },
-                    { icon: "fa fa-retweet", href: "#" },
+                    { icon: "fa fa-retweet", href: "/Detalles" },
                     { icon: "fa fa-shopping-cart", href: "#" },
                   ].map((item, idx) => (
                     <li key={idx}>
