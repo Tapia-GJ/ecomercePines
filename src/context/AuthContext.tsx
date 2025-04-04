@@ -34,6 +34,7 @@ export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
     const {
       data: { subscription },
     } = client.auth.onAuthStateChange((_event, session) => {
+      console.log('event ', _event, 'session ', session);
       setUser(session?.user ?? null);
     });
 

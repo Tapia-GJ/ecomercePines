@@ -1,3 +1,4 @@
+import ProductosPines from "../components/ProductosPines";
 import SliderCardPines from "../components/SliderCardPines";
 
 export default function PinesPage() {
@@ -32,12 +33,16 @@ export default function PinesPage() {
 
 
       {/* productos */}
-      <div className="mt-10 mb-20 px-4">
+      <section>
+        <ProductosPines />
+      </section>
+
+      {/* <div className="mt-10 mb-20 px-4">
         <div className="flex flex-wrap justify-center gap-6">
           {[
             { name: "Pin Gato Meme", price: 30, img: "/product/1.jpg" },
             { name: "Pin Gnomo Gravity Falls", price: 42, img: "/product/5.jpg" },
-            { name: "Pin Michi Fresas", price: 36.5, img: "/product/7.jpg" },
+            { name: "Pin Michi Fresas", price: 36.5, img: "/product/7.jpg" }, 
             { name: "Pin Abeja Minecraft", price: 25, img: "/product/8.jpg" },
             { name: "Pin Spiderman", price: 29.99, img: "/product/10.jpg" },
             { name: "Pin Mundo de Gumball Meme", price: 33, img: "/product/11.jpg" },
@@ -49,14 +54,14 @@ export default function PinesPage() {
               className="w-64 group bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition"
             >
               {/* Imagen cuadrada */}
-              <div className="relative w-full aspect-square bg-gray-100">
+              {/* <div className="relative w-full aspect-square bg-gray-100">
                 <img
                   src={product.img}
                   alt={product.name}
                   className="w-full h-full object-cover"
-                />
+                /> */}
                 {/* Íconos al hover */}
-                <ul className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 opacity-0 group-hover:opacity-100 transition duration-300">
+                {/* <ul className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 opacity-0 group-hover:opacity-100 transition duration-300">
                   {[
                     { icon: "fa fa-heart", href: "#" },
                     { icon: "fa fa-retweet", href: "/Detalles" },
@@ -72,9 +77,9 @@ export default function PinesPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
               {/* Texto del producto */}
-              <div className="p-4 text-center">
+              {/* <div className="p-4 text-center">
                 <h6 className="font-medium text-gray-800 hover:text-gray-800 transition">
                   <a href="#">{product.name}</a>
                 </h6>
@@ -85,7 +90,7 @@ export default function PinesPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       {/* fin */}
     </>
   );

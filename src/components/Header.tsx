@@ -109,18 +109,18 @@ export default function Header() {
 
             {/* <!-- Icons --> */}
             <div className="flex items-center gap-6">
-              <div className="relative">
+              {/* <div className="relative">
                 <i className="fas fa-heart text-black text-xl"></i>
                 <span className="absolute -top-2 -right-2 text-xs bg-orange-400 rounded-full px-1">
                   1
                 </span>
-              </div>
+              </div> */}
               <Link to="/carrito">
                 <div className="relative cursor-pointer">
                   <i className="fas fa-shopping-bag text-black text-xl"></i>
-                  <span className="absolute -top-2 -right-2 text-xs bg-orange-400 rounded-full px-1">
+                  {/* <span className="absolute -top-2 -right-2 text-xs bg-orange-400 rounded-full px-1">
                     3
-                  </span>
+                  </span> */}
                 </div>
               </Link>
             </div>

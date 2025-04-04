@@ -26,7 +26,7 @@ export default function AppRouter() {
           <Route path="/Blog" element={<ProtectedRoute><BlogPage /></ProtectedRoute>} />
           <Route path="/Carrito" element={<ProtectedRoute><CarritoPage /></ProtectedRoute>} />
           <Route path="/Compra" element={<ProtectedRoute><CompraPage /></ProtectedRoute>} />
-          <Route path="/Detalles" element={<ProtectedRoute><DetallesPage /></ProtectedRoute>} />
+          <Route path="/Detalles/:id" element={<ProtectedRoute><DetallesPage /></ProtectedRoute>} />
         </Route>
       </Routes>
   )
