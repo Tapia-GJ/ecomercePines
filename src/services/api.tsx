@@ -139,3 +139,24 @@ export async function updateQuantityInCart(id:number, cantidad:number) {
   .eq('id', id);
   return error;
 }
+
+// Vacía todos los productos del carrito del usuario
+export async function clearCart(cliente_id: string) {
+  // Obtener el carrito del cliente
+  const { data: carrito, error: errorCarrito } = await client
+    .from("carritos")
+    .select("id")
+    .eq("cliente_id", cliente_id)
+    .maybeSingle();
+
+  if (errorCarrito) throw errorCarrito;
+  if (!carrito) return; // No hay carrito que vaciar
+
+  // Eliminar todos los items de ese carrito
+  const { error: errorItems } = await client
+    .from("items_carrito")
+    .delete()
+    .eq("carrito_id", carrito.id);
+
+  if (errorItems) throw errorItems;
+}

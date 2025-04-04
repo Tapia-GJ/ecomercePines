@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { client } from "../supabase/client";
 import { UserAuth } from "../context/AuthContext";
 import { removeFromCart, updateQuantityInCart } from "../services/api";
-
+import { createPayment } from "../services/mercadoPago";
 
 interface Producto {
   id: number;
@@ -29,6 +29,21 @@ export default function CartSection() {
     fetchedOnce.current = true;
     fetchCart();
   }, [user]);
+
+  const handleCheckout = async () => {
+    const itemsToSend = items.map((item) => ({
+      title: item.producto.nombre,
+      unit_price: item.producto.precio,
+      quantity: item.cantidad,
+    }));
+
+    try {
+      const paymentUrl = await createPayment(itemsToSend);
+      window.location.href = paymentUrl; // redirecciona a Mercado Pago
+    } catch (error) {
+      alert("No se pudo generar el pago. Intenta más tarde.");
+    }
+  };
 
   const fetchCart = async () => {
     setLoading(true);
@@ -206,12 +221,13 @@ export default function CartSection() {
                   <span>${subtotal.toFixed(2)}</span>
                 </li>
               </ul>
-              <Link
-                to="/compra"
+              <button
+                onClick={handleCheckout}
                 className="block w-full text-center bg-[#14213D] hover:bg-[#0A0908] text-white py-3 rounded font-semibold shadow"
               >
                 Proceder a pago
-              </Link>
+              </button>
+
             </div>
           </div>
         </div>

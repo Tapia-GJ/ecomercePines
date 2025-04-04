@@ -11,6 +11,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import BlogPage from './Views/BlogPage'
 import CompraPage from './Views/CompraPage'
 import DetallesPage from './Views/DetallesPage'
+import PagoExitoso from './Views/PagoExitoso'
 
 export default function AppRouter() {
   return (
@@ -27,6 +28,9 @@ export default function AppRouter() {
           <Route path="/Carrito" element={<ProtectedRoute><CarritoPage /></ProtectedRoute>} />
           <Route path="/Compra" element={<ProtectedRoute><CompraPage /></ProtectedRoute>} />
           <Route path="/Detalles/:id" element={<ProtectedRoute><DetallesPage /></ProtectedRoute>} />
+          <Route path="/pago-exitoso" element={<ProtectedRoute><PagoExitoso /></ProtectedRoute>} />
+          <Route path="/pago-error" element={<ProtectedRoute><PagoExitoso /></ProtectedRoute>} />
+          <Route path="/pago-pendiente" element={<ProtectedRoute><PagoExitoso /></ProtectedRoute>} />
         </Route>
       </Routes>
   )
