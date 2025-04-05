@@ -1,54 +1,139 @@
-# React + TypeScript + Vite
+# 🛒 Ecommerce Pines
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto completo de eCommerce para venta de pines y productos personalizados, con frontend en React + TypeScript y backend con Express y pasarela de pago integrada usando Vexor + Mercado Pago.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Estructura del Proyecto
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+ECOMERCE/
+├── backend/            # Backend con Express y Mercado Pago vía Vexor
+├── ecomercePines/      # Frontend con React, Vite y TypeScript
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Tecnologías Utilizadas
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### Frontend (`/ecomercePines`)
+- React + Vite + TypeScript
+- TailwindCSS
+- Supabase (Auth y Base de Datos)
+- SwiperJS (carruseles)
+- Mercado Pago (vía Vexor)
+  
+### Backend (`/backend`)
+- Node.js
+- Express
+- Vexor SDK
+- CORS
+- Dotenv
+
+---
+
+## 🔧 Requisitos Previos
+
+- Node.js 18+
+- Cuenta en [Supabase](https://supabase.com/)
+- Cuenta en [Vexor](https://vexor.dev/)
+- Cuenta de [Mercado Pago](https://www.mercadopago.com/)
+
+---
+
+## ▶️ Instrucciones de Uso
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
 ```
+
+---
+
+### 2. Configurar el Backend
+
+```bash
+cd backend
+npm install
+```
+
+Crear archivo `.env`:
+
+```env
+VEXOR_PUBLISHABLE_KEY=tu_clave_publica
+VEXOR_API_KEY=tu_api_key
+VEXOR_PROJECT_ID=tu_project_id
+PORT=3000
+```
+
+Iniciar backend:
+
+```bash
+node index.js
+```
+
+> El servidor correrá en: `http://localhost:3000`
+
+---
+
+### 3. Configurar el Frontend
+
+```bash
+cd ../ecomercePines
+npm install
+```
+
+Crear archivo `.env`:
+
+```env
+VITE_BACKEND_URL=http://localhost:3000
+VITE_SUPABASE_URL=tu_url_supabase
+VITE_SUPABASE_ANON_KEY=tu_anon_key
+```
+
+Iniciar frontend:
+
+```bash
+npm run dev
+```
+
+> La app se abrirá en: `http://localhost:5173`
+
+---
+
+## 💳 Pago con Mercado Pago
+
+- El usuario puede pagar con tarjeta directamente desde el carrito.
+- Al completar el pago es redirigido automáticamente a:
+  - ✅ `pago-exitoso`
+  - ❌ `pago-error`
+  - ⏳ `pago-pendiente`
+- El carrito se vacía automáticamente después del pago.
+
+---
+
+## 📦 Base de Datos en Supabase
+
+- **productos**: catálogo de artículos
+- **carritos** y **items_carrito**: control del carrito
+- **opiniones**: reseñas de productos
+- **usuarios**: manejados con Supabase Auth
+
+---
+
+## 📸 Capturas
+
+_(Agrega aquí imágenes si quieres mostrar tu app)_
+
+---
+
+## 🤝 Autor
+
+Desarrollado por **Luis Tapia / Tapia-GJ**
+- 💼 Proyecto universitario / personal
+- 🌐 Contacto: luivstapia285@gmail.com
+
+---
