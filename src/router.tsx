@@ -19,18 +19,18 @@ export default function AppRouter() {
       <Routes>
         <Route path="/Login" element={ <LoginPage />} />
         <Route path="/Registro" element={<RegistroPage />} />
-        <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
-          <Route path="/" element={<ProtectedRoute><IndexPage /></ProtectedRoute> } index />
-          <Route path="/Top" element={<ProtectedRoute><TopPage /></ProtectedRoute>} />
-          <Route path="/Pines" element={<ProtectedRoute><PinesPage /></ProtectedRoute>} />
-          <Route path="/Llaveros" element={<ProtectedRoute><LlaverosPage /></ProtectedRoute>} />
-          <Route path="/Blog" element={<ProtectedRoute><BlogPage /></ProtectedRoute>} />
-          <Route path="/Carrito" element={<ProtectedRoute><CarritoPage /></ProtectedRoute>} />
-          <Route path="/Compra" element={<ProtectedRoute><CompraPage /></ProtectedRoute>} />
-          <Route path="/Detalles/:id" element={<ProtectedRoute><DetallesPage /></ProtectedRoute>} />
-          <Route path="/pago-exitoso" element={<ProtectedRoute><PagoExitoso /></ProtectedRoute>} />
-          <Route path="/pago-error" element={<ProtectedRoute><PagoExitoso /></ProtectedRoute>} />
-          <Route path="/pago-pendiente" element={<ProtectedRoute><PagoExitoso /></ProtectedRoute>} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<IndexPage /> } index />
+          <Route path="/Top" element={<TopPage />} />
+          <Route path="/Pines" element={<PinesPage />} />
+          <Route path="/Llaveros" element={<LlaverosPage />} />
+          <Route path="/Blog" element={<BlogPage />} />
+          <Route path="/Carrito" element={<CarritoPage />} />
+          <Route path="/Compra" element={<CompraPage />} />
+          <Route path="/Detalles/:id" element={<DetallesPage />} />
+          <Route path="/pago-exitoso" element={<PagoExitoso />} />
+          <Route path="/pago-error" element={<PagoExitoso />} />
+          <Route path="/pago-pendiente" element={<PagoExitoso />} />
         </Route>
       </Routes>
   )

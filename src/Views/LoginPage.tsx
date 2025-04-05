@@ -24,20 +24,6 @@ export default function LoginPage() {
     }, [message]);
 
 
-    // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    //     e.preventDefault();
-    //     try {
-    //         const result = await client.auth.signInWithPassword({
-    //             email: email,
-    //             password: password,
-    //         });
-    //         console.log(result);
-    //         navigate("/");
-
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setErrorMessage(""); // Limpia errores previos
