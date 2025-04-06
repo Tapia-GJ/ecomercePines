@@ -110,12 +110,12 @@ export default function AllProducts() {
                     </ul>
                   </div>
                   <div className="text-center mt-4">
-                    <h6 className="text-md font-semibold text-gray-800">
+                    <p className="text-md font-semibold text-gray-800">
                       {product.nombre}
-                    </h6>
-                    <h5 className="text-orange-400 font-bold text-lg">
+                    </p>
+                    <p className="text-orange-400 font-bold text-lg">
                       ${product.precio.toFixed(2)}
-                    </h5>
+                    </p>
                   </div>
                 </article>
               ))}

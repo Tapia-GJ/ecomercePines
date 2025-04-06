@@ -32,7 +32,7 @@ const blogs = [
   },
 ];
 
-const BlogPreview: React.FC = () => {
+export default function BlogPreview(){
   return (
     <section className="py-12" aria-labelledby="blog-heading">
       <div className="container mx-auto px-4">
@@ -76,14 +76,14 @@ const BlogPreview: React.FC = () => {
                     {blog.comments}
                   </li>
                 </ul>
-                <h5 className="font-semibold text-lg mb-2">
+                <p className="font-semibold text-lg mb-2">
                   <a
                     href={blog.link}
                     aria-label={`Leer artículo completo: ${blog.title}`}
                   >
                     {blog.title}
                   </a>
-                </h5>
+                </p>
                 <p className="text-gray-600 text-sm">{blog.excerpt}</p>
               </div>
             </article>
@@ -93,5 +93,3 @@ const BlogPreview: React.FC = () => {
     </section>
   );
 };
-
-export default BlogPreview;
