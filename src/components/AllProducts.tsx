@@ -54,12 +54,16 @@ export default function AllProducts() {
     setCurrentPage((prev) => Math.min(prev + 1, totalPages));
 
   return (
-    <section className="py-10">
+    <section className="py-10" aria-labelledby="productos-heading">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 relative inline-block after:block after:h-1 after:w-20 after:bg-orange-400 after:mx-auto after:mt-2">
+          <h2
+            id="productos-heading"
+            className="text-3xl font-bold text-gray-900 relative inline-block after:block after:h-1 after:w-20 after:bg-orange-400 after:mx-auto after:mt-2"
+          >
             Nuestros productos
           </h2>
+
         </div>
 
         {loading ? (
@@ -68,11 +72,20 @@ export default function AllProducts() {
           <>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {visibleProducts.map((product) => (
-                <div key={product.id}>
+                <article key={product.id}
+                  aria-label={`Producto ${product.nombre}`}
+                >
                   <div
                     className="relative h-64 bg-cover bg-center rounded-md overflow-hidden group"
-                    style={{ backgroundImage: `url(${product.imagen_path})` }}
                   >
+                    <img
+                      src={product.imagen_path}
+                      alt={`Imagen de ${product.nombre}`}
+                      loading="lazy"
+                      width={300}
+                      height={300}
+                      className="w-full h-[300px] object-cover rounded-md"
+                    />
                     <ul className="absolute bottom-[-60px] left-0 right-0 flex justify-center gap-3 transition-all duration-300 group-hover:bottom-5">
 
                       <li>
@@ -80,6 +93,7 @@ export default function AllProducts() {
 
                           onClick={() => goToDetails(product.id)}
                           className="w-10 h-10 flex items-center justify-center bg-white text-black border border-gray-200 rounded-full transition-all hover:bg-orange-400 hover:text-white"
+                          aria-label={`Ver detalles de ${product.nombre}`}
                         >
                           <FaEllipsisH className="text-[16px]" />
                         </button>
@@ -87,6 +101,7 @@ export default function AllProducts() {
                       <li>
                         <button
                           onClick={() => handleAddToCart(product.id)}
+                          aria-label={`Agregar ${product.nombre} al carrito`}
                           className="w-10 h-10 flex items-center justify-center bg-white text-black border border-gray-200 rounded-full transition-all hover:bg-orange-400 hover:text-white"
                         >
                           <FaShoppingCart className="text-[16px]" />
@@ -102,7 +117,7 @@ export default function AllProducts() {
                       ${product.precio.toFixed(2)}
                     </h5>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
 

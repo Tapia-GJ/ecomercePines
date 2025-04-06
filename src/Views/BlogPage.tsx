@@ -17,17 +17,17 @@ const BlogDetailsSection: React.FC = () => {
               <h4 className="text-xl font-semibold">Artículos disponibles</h4>
               {[
                 {
-                  src: "/blog/limpiar.jpg",
+                  src: "/blog/limpiar.webp",
                   title: "Cuidados básicos para que tus pines duren más",
                   date: "Marzo 4, 2025",
                 },
                 {
-                  src: "/blog/creativo.jpg",
+                  src: "/blog/creativo.webp",
                   title: "Tips You To Balance Nutrition Meal Day",
                   date: "MAR 05, 2019",
                 },
                 {
-                  src: "/blog/escoger.jpg",
+                  src: "/blog/escoger.webp",
                   title: "4 Principles Help You Lose Weight With Vegetables",
                   date: "MAR 05, 2019",
                 },

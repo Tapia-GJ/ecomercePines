@@ -56,7 +56,7 @@ export default function Header() {
           <div className="flex flex-row justify-between max-w-7xl items-center mx-auto py-3">
             {/* <!-- Logo --> */}
             <div>
-              <img src="/logo.png" alt="Logo" className="h-16" />
+              <img src="/logo.webp" alt="Logo" className="h-16" />
             </div>
 
             {/* <!-- Menu --> */}

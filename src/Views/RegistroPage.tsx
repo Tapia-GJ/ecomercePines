@@ -43,7 +43,7 @@ export default function RegistroPage() {
           {/* Logo floating above the card */}
           <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-30 h-30 bg-white rounded-full p-2 shadow-lg flex items-center justify-center z-10">
             <div className="w-24 h-24 relative">
-              <img src="/logo.png" alt="Chibiquiles Logo" className="object-contain w-full h-full" />
+              <img src="/logo.webp" alt="Chibiquiles Logo" className="object-contain w-full h-full" />
             </div>
           </div>
 
