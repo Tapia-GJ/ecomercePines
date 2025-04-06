@@ -1,3 +1,4 @@
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -19,10 +20,10 @@ export default function Footer() {
           <div className="w-full md:w-1/3 text-center mb-6">
             <div className="flex justify-center space-x-4">
               <a href="#" aria-label="Síguenos en Facebook" className="text-gray-600 hover:text-orange-400">
-                <i className="fa fa-facebook text-2xl" aria-hidden="true"></i>
+                <FaFacebookF className="w-6 h-6" aria-hidden="true"/> 
               </a>
               <a href="#" aria-label="Síguenos en Instagram" className="text-gray-600 hover:text-orange-400">
-                <i className="fa fa-instagram text-2xl" aria-hidden="true"></i>
+                <FaInstagram className="w-6 h-6" aria-hidden="true"/>
               </a>
             </div>
           </div>

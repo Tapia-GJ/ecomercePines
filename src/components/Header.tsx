@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
+import { FaFacebookF, FaInstagram, FaShoppingCart, FaUser } from "react-icons/fa";
 
 export default function Header() {
   const location = useLocation();
@@ -33,18 +34,18 @@ export default function Header() {
 
             <div className="flex items-center space-x-6">
               <a href="https://facebook.com/chibiquiles" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <i className="fab fa-facebook-f" aria-hidden="true"></i>
+                <FaFacebookF className="w-4 h-4" aria-hidden="true"/> 
               </a>
 
               <a href="https://instagram.com/chibiquiles" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <i className="w-4 h-4 fab fa-instagram" aria-hidden="true"></i>
+                <FaInstagram className="w-4 h-4" aria-hidden="true"/>
               </a>
               <span className="text-gray-400">|</span>
               <button
                 onClick={signOut}
                 className="flex items-center gap-2 text-black hover:text-orange-400"
               >
-                <i className="w-4 h-4 fas fa-user" aria-hidden="true"></i> Cerrar sesión
+                <FaUser className="w-4 h-4" aria-hidden="true"/> Cerrar sesión
               </button>
             </div>
           </div>
@@ -100,7 +101,7 @@ export default function Header() {
             <div className="flex items-center gap-6">
               <Link to="/carrito">
                 <div className="relative cursor-pointer">
-                  <i className="fas fa-shopping-bag text-black text-xl"></i>
+                  <FaShoppingCart className="text-black text-xl" />
                 </div>
               </Link>
             </div>
