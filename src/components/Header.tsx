@@ -32,21 +32,19 @@ export default function Header() {
             </div>
 
             <div className="flex items-center space-x-6">
-              <a href="#" className="text-black hover:text-orange-400">
-                <i className="w-4 h-4 fab fa-facebook-f"></i>
+              <a href="https://facebook.com/chibiquiles" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i className="fab fa-facebook-f" aria-hidden="true"></i>
               </a>
-              <a href="#" className="text-black hover:text-orange-400">
-                <i className="w-4 h-4 fab fa-twitter"></i>
+
+              <a href="https://instagram.com/chibiquiles" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i className="w-4 h-4 fab fa-instagram" aria-hidden="true"></i>
               </a>
               <span className="text-gray-400">|</span>
-              {/* <Link to="/Login" className="flex items-center gap-2 text-black hover:text-orange-400">
-                                <i className="w-4 h-4 fas fa-user"></i> Login
-                            </Link> */}
               <button
                 onClick={signOut}
                 className="flex items-center gap-2 text-black hover:text-orange-400"
               >
-                <i className="w-4 h-4 fas fa-user"></i> Cerrar sesión
+                <i className="w-4 h-4 fas fa-user" aria-hidden="true"></i> Cerrar sesión
               </button>
             </div>
           </div>
@@ -58,16 +56,8 @@ export default function Header() {
             <div>
               <img src="/logo.webp" alt="Logo" className="h-16" />
             </div>
-
-            {/* <!-- Menu --> */}
-            {/* <nav className="flex gap-9 font-medium text-black">
-                            <Link to="/" className={isActive("/")}>HOME</Link>
-                            <Link to="/Top" className={isActive("/Top")}>TOP</Link>
-                            <Link to="/Categorias" className={isActive("/Categorias")}>CATEGORÍAS</Link>
-                            <Link to="/Blog" className={isActive("/Blog")}>BLOG</Link>
-                        </nav> */}
-
-            <nav className="flex gap-9 font-medium text-black relative">
+            {/* NAVBAR */}
+            <nav className="flex gap-9 font-medium text-black relative" aria-label="Navegación principal">
               <Link to="/" className={isActive("/")}>
                 HOME
               </Link>
@@ -78,11 +68,10 @@ export default function Header() {
               {/* Categorías desplegable */}
               <div className="relative group">
                 <button
-                  className={`cursor-pointer ${
-                    path.includes("/Pines") || path.includes("/Llaveros")
+                  className={`cursor-pointer ${path.includes("/Pines") || path.includes("/Llaveros")
                       ? "text-orange-400"
                       : "hover:text-orange-400"
-                  }`}
+                    }`}
                 >
                   CATEGORÍAS
                 </button>
@@ -109,18 +98,9 @@ export default function Header() {
 
             {/* <!-- Icons --> */}
             <div className="flex items-center gap-6">
-              {/* <div className="relative">
-                <i className="fas fa-heart text-black text-xl"></i>
-                <span className="absolute -top-2 -right-2 text-xs bg-orange-400 rounded-full px-1">
-                  1
-                </span>
-              </div> */}
               <Link to="/carrito">
                 <div className="relative cursor-pointer">
                   <i className="fas fa-shopping-bag text-black text-xl"></i>
-                  {/* <span className="absolute -top-2 -right-2 text-xs bg-orange-400 rounded-full px-1">
-                    3
-                  </span> */}
                 </div>
               </Link>
             </div>
