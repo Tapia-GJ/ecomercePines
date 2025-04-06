@@ -30,7 +30,7 @@ export default function Footer() {
 
           {/* Suscripción */}
           <div className="w-full md:w-1/3 text-center md:text-right">
-            <h6 className="text-lg font-semibold">Únete a nuestra comunidad</h6>
+            <p className="text-lg font-semibold">Únete a nuestra comunidad</p>
             <p className="text-sm mt-1">
               Recibe actualizaciones por correo electrónico sobre nuestras últimas novedades y ofertas especiales.
             </p>

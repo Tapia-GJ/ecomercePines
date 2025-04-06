@@ -1,13 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
-import { FaFacebookF, FaInstagram, FaShoppingCart, FaUser } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaShoppingCart, FaUser, FaBars } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Header() {
   const location = useLocation();
   const path = location.pathname;
   const { signOut } = UserAuth();
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const isActive = (route: string) =>
-    path === route ? "text-orange-500" : "hover:text-orange-500";
+    path === route ? "text-orange-600" : "hover:text-orange-600";
 
   return (
     <>
@@ -34,18 +36,18 @@ export default function Header() {
 
             <div className="flex items-center space-x-6">
               <a href="https://facebook.com/chibiquiles" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <FaFacebookF className="w-4 h-4" aria-hidden="true"/> 
+                <FaFacebookF className="w-4 h-4" aria-hidden="true" />
               </a>
 
               <a href="https://instagram.com/chibiquiles" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <FaInstagram className="w-4 h-4" aria-hidden="true"/>
+                <FaInstagram className="w-4 h-4" aria-hidden="true" />
               </a>
               <span className="text-gray-400">|</span>
               <button
                 onClick={signOut}
                 className="flex items-center gap-2 text-black hover:text-orange-500"
               >
-                <FaUser className="w-4 h-4" aria-hidden="true"/> Cerrar sesión
+                <FaUser className="w-4 h-4" aria-hidden="true" /> Cerrar sesión
               </button>
             </div>
           </div>
@@ -57,8 +59,19 @@ export default function Header() {
             <div>
               <img src="/logo.webp" alt="Logo" className="h-16" />
             </div>
+
+            {/* Botón hamburguesa */}
+            <button
+              className="md:hidden text-2xl text-black"
+              aria-label="Abrir o cerrar menú"
+              onClick={() => setIsNavOpen(!isNavOpen)}
+            >
+              <FaBars />
+            </button>
             {/* NAVBAR */}
-            <nav className="flex gap-9 font-medium text-black relative" aria-label="Navegación principal">
+            <nav className={`${isNavOpen ? "flex" : "hidden"
+              } md:flex flex-col md:flex-row gap-6 md:items-center font-medium text-black`}
+              aria-label="Navegación principal" id="navbar">
               <Link to="/" className={isActive("/")}>
                 HOME
               </Link>
@@ -70,9 +83,11 @@ export default function Header() {
               <div className="relative group">
                 <button
                   className={`cursor-pointer ${path.includes("/Pines") || path.includes("/Llaveros")
-                      ? "text-orange-500"
-                      : "hover:text-orange-500"
+                    ? "text-orange-500"
+                    : "hover:text-orange-500"
                     }`}
+                  aria-haspopup="true"
+                  aria-expanded="false"
                 >
                   CATEGORÍAS
                 </button>
