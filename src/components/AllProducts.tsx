@@ -59,7 +59,7 @@ export default function AllProducts() {
         <div className="text-center mb-10">
           <h2
             id="productos-heading"
-            className="text-3xl font-bold text-gray-900 relative inline-block after:block after:h-1 after:w-20 after:bg-orange-400 after:mx-auto after:mt-2"
+            className="text-3xl font-bold text-gray-900 relative inline-block after:block after:h-1 after:w-20 after:bg-orange-500 after:mx-auto after:mt-2"
           >
             Nuestros productos
           </h2>
@@ -92,7 +92,7 @@ export default function AllProducts() {
                         <button
 
                           onClick={() => goToDetails(product.id)}
-                          className="w-10 h-10 flex items-center justify-center bg-white text-black border border-gray-200 rounded-full transition-all hover:bg-orange-400 hover:text-white"
+                          className="w-10 h-10 flex items-center justify-center bg-white text-black border border-gray-200 rounded-full transition-all hover:bg-orange-500 hover:text-white"
                           aria-label={`Ver detalles de ${product.nombre}`}
                         >
                           <FaEllipsisH className="text-[16px]" />
@@ -102,7 +102,7 @@ export default function AllProducts() {
                         <button
                           onClick={() => handleAddToCart(product.id)}
                           aria-label={`Agregar ${product.nombre} al carrito`}
-                          className="w-10 h-10 flex items-center justify-center bg-white text-black border border-gray-200 rounded-full transition-all hover:bg-orange-400 hover:text-white"
+                          className="w-10 h-10 flex items-center justify-center bg-white text-black border border-gray-200 rounded-full transition-all hover:bg-orange-500 hover:text-white"
                         >
                           <FaShoppingCart className="text-[16px]" />
                         </button>
@@ -113,7 +113,7 @@ export default function AllProducts() {
                     <p className="text-md font-semibold text-gray-800">
                       {product.nombre}
                     </p>
-                    <p className="text-orange-400 font-bold text-lg">
+                    <p className="text-gray-800 font-bold text-lg">
                       ${product.precio.toFixed(2)}
                     </p>
                   </div>
@@ -126,7 +126,7 @@ export default function AllProducts() {
               <button
                 onClick={handlePrev}
                 disabled={currentPage === 1}
-                className="px-4 py-2 bg-orange-400 text-white rounded hover:bg-orange-500 disabled:opacity-50"
+                className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 disabled:opacity-50"
               >
                 Anterior
               </button>
@@ -136,7 +136,7 @@ export default function AllProducts() {
               <button
                 onClick={handleNext}
                 disabled={currentPage === totalPages}
-                className="px-4 py-2 bg-orange-400 text-white rounded hover:bg-orange-500 disabled:opacity-50"
+                className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 disabled:opacity-50"
               >
                 Siguiente
               </button>

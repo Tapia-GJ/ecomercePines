@@ -17,7 +17,7 @@ export default function IndexPage() {
             </p>
             <Link to="/Top"
               aria-label="Ir a sección de productos destacados"
-              className="inline-block mt-4 px-6 py-2 bg-orange-400 text-white rounded-md hover:bg-gray-800 transition"
+              className="inline-block mt-4 px-6 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition"
             >
               Descubrir
             </Link>

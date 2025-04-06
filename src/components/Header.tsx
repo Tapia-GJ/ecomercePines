@@ -7,7 +7,7 @@ export default function Header() {
   const path = location.pathname;
   const { signOut } = UserAuth();
   const isActive = (route: string) =>
-    path === route ? "text-orange-400" : "hover:text-orange-400";
+    path === route ? "text-orange-500" : "hover:text-orange-500";
 
   return (
     <>
@@ -43,7 +43,7 @@ export default function Header() {
               <span className="text-gray-400">|</span>
               <button
                 onClick={signOut}
-                className="flex items-center gap-2 text-black hover:text-orange-400"
+                className="flex items-center gap-2 text-black hover:text-orange-500"
               >
                 <FaUser className="w-4 h-4" aria-hidden="true"/> Cerrar sesión
               </button>
@@ -70,8 +70,8 @@ export default function Header() {
               <div className="relative group">
                 <button
                   className={`cursor-pointer ${path.includes("/Pines") || path.includes("/Llaveros")
-                      ? "text-orange-400"
-                      : "hover:text-orange-400"
+                      ? "text-orange-500"
+                      : "hover:text-orange-500"
                     }`}
                 >
                   CATEGORÍAS
@@ -79,13 +79,13 @@ export default function Header() {
                 <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded z-10 w-full">
                   <Link
                     to="/Pines"
-                    className="block px-4 py-2 text-sm text-black hover:text-orange-400 hover:bg-gray-100"
+                    className="block px-4 py-2 text-sm text-black hover:text-orange-500 hover:bg-gray-100"
                   >
                     Pines
                   </Link>
                   <Link
                     to="/Llaveros"
-                    className="block px-4 py-2 text-sm text-black hover:bg-gray-100 hover:text-orange-400"
+                    className="block px-4 py-2 text-sm text-black hover:bg-gray-100 hover:text-orange-500"
                   >
                     Llaveros
                   </Link>
@@ -99,9 +99,9 @@ export default function Header() {
 
             {/* <!-- Icons --> */}
             <div className="flex items-center gap-6">
-              <Link to="/carrito">
+              <Link to="/carrito" aria-label="Ir a carrito">
                 <div className="relative cursor-pointer">
-                  <FaShoppingCart className="text-black text-xl" />
+                  <FaShoppingCart aria-hidden="true" className="text-black text-xl" />
                 </div>
               </Link>
             </div>
