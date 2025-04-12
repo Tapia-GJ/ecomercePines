@@ -45,7 +45,7 @@ export default function Header() {
               <span className="text-gray-400">|</span>
               <button
                 onClick={signOut}
-                className="flex items-center gap-2 text-black hover:text-orange-500"
+                className="cursor-pointer flex items-center gap-2 text-black hover:text-orange-500"
               >
                 <FaUser className="w-4 h-4" aria-hidden="true" /> Cerrar sesión
               </button>

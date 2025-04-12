@@ -131,7 +131,7 @@ export default function LoginPage() {
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-orange-400 hover:bg-orange-500 text-white py-4 rounded-xl font-medium text-lg shadow-lg shadow-orange-400/20 transition-all hover:shadow-xl hover:shadow-orange-500/30 hover:-translate-y-0.5"
+                                    className="w-full bg-orange-400 hover:bg-orange-500 text-white py-4 rounded-xl font-medium text-lg shadow-lg shadow-orange-400/20 transition-all hover:shadow-xl hover:shadow-orange-500/30 hover:-translate-y-0.5 cursor-pointer"
                                 >
                                     Iniciar Sesión
                                 </button>
@@ -145,7 +145,7 @@ export default function LoginPage() {
 
                                 <div className="flex justify-center gap-4 mt-4">
                                     {/* Google */}
-                                    <button onClick={signInWithGoogle} className="p-3 rounded-full border-2 border-gray-200 hover:border-orange-500 hover:bg-gray-50 transition-all">
+                                    <button onClick={signInWithGoogle} className="cursor-pointer p-3 rounded-full border-2 border-gray-200 hover:border-orange-500 hover:bg-gray-50 transition-all">
                                         {/* SVG de Google */}
                                         <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
                                             <path
