@@ -11,6 +11,12 @@ import BlogPage from './Views/BlogPage'
 import CompraPage from './Views/CompraPage'
 import DetallesPage from './Views/DetallesPage'
 import PagoExitoso from './Views/PagoExitoso'
+import Dashboard from './Views/admin/Dashboard'
+import Productos from './Views/admin/Productos'
+import Pedidos from './Views/admin/Pedidos'
+import Clientes from './Views/admin/Clientes'
+import Analisis from './Views/admin/Analisis'
+import ProtectedRoute from './components/ProtectedRoute'
 
 export default function AppRouter() {
   return (
@@ -18,7 +24,17 @@ export default function AppRouter() {
       <Routes>
         <Route path="/Login" element={ <LoginPage />} />
         <Route path="/Registro" element={<RegistroPage />} />
-        <Route element={<Layout />}>
+
+        {/* admin */}
+          <Route>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/productos" element={<Productos />} />
+            <Route path="/pedidos" element={<Pedidos />} /> 
+            <Route path="/clientes" element={<Clientes />} />
+            <Route path="/analisis" element={<Analisis />} /> 
+          </Route>
+        <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
+        {/* public */}
           <Route path="/" element={<IndexPage /> } index />
           <Route path="/Top" element={<TopPage />} />
           <Route path="/Pines" element={<PinesPage />} />

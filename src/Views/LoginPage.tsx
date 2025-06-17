@@ -35,7 +35,8 @@ export default function LoginPage() {
           } else {
             navigate("/");
           }
-        } catch (error:any) {
+        } catch (error: any) {
+          console.error("Error al iniciar sesión:", error);
           setErrorMessage("Correo o contraseña incorrecta");
         }
       };
