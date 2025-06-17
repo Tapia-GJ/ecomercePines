@@ -126,7 +126,7 @@ export default function AllProducts() {
               <button
                 onClick={handlePrev}
                 disabled={currentPage === 1}
-                className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 disabled:opacity-50"
+                className="cursor-pointer px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 disabled:opacity-50"
               >
                 Anterior
               </button>
@@ -136,7 +136,7 @@ export default function AllProducts() {
               <button
                 onClick={handleNext}
                 disabled={currentPage === totalPages}
-                className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 disabled:opacity-50"
+                className="cursor-pointer px-4 py-2  bg-orange-500 text-white rounded hover:bg-orange-600 disabled:opacity-50"
               >
                 Siguiente
               </button>

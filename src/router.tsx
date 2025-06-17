@@ -7,6 +7,7 @@ import LlaverosPage from './Views/LlaverosPage'
 import LoginPage from './Views/LoginPage'
 import RegistroPage from './Views/RegistroPage'
 import CarritoPage from './Views/CarritoPage'
+import ProtectedRoute from './components/ProtectedRoute'
 import BlogPage from './Views/BlogPage'
 import CompraPage from './Views/CompraPage'
 import DetallesPage from './Views/DetallesPage'
@@ -16,7 +17,6 @@ import Productos from './Views/admin/Productos'
 import Pedidos from './Views/admin/Pedidos'
 import Clientes from './Views/admin/Clientes'
 import Analisis from './Views/admin/Analisis'
-import ProtectedRoute from './components/ProtectedRoute'
 
 export default function AppRouter() {
   return (
